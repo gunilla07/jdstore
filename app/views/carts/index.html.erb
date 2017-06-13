@@ -1,5 +1,11 @@
 <div class="row">
   <div class="col-md-12">
+
+    <%= link_to("clear all", clean_carts_path ,
+                method: :delete , class: "pull-right",
+                style: "text-decoration: inderline;",
+                data: { confirm: "Are you sure clear all? "} )%>
+                
     <h2> Cart </h2>
     <table class="table table-bordered">
       <thead>
@@ -48,7 +54,7 @@
       <span class="pull-right">
         <span>
 
-          Total <%= render_cart_total_price(current_cart) %> RMB 
+          Total <%= render_cart_total_price(current_cart) %> RMB
          </span>
       </span>
     </div>
